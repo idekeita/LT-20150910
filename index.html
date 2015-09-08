@@ -154,6 +154,89 @@ https://www.janog.gr.jp/meeting/janog35/index.php/download_file/view/83/175/
 
 
 </div>
+<div class="step" data-x="0" data-y="1600">
+
+
+<h2>キャッシュという諸刃の剣</h2>
+
+<ul>
+<li>メリット
+
+<ul>
+<li>名前解決の負荷、時間短縮<br>
+</li>
+</ul>
+</li>
+<li>デメリット
+
+<ul>
+<li>ドメイン名の迅速な対応づけができなくなる</li>
+</ul>
+</li>
+</ul>
+
+<pre><code>キャッシュ可能な時間(TTL)で調整
+</code></pre>
+
+
+</div>
+<div class="step" data-x="1200" data-y="1600">
+
+
+<h2>ネガティブキャッシュ</h2>
+
+<ul>
+<li>顧客から「登録したドメイン名が利用できない」と連絡がきたとき</li>
+<li>顧客が利用するキャッシュDNSサーバー以外は名前が引けるとき</li>
+</ul>
+
+<pre><code>ネガティブキャッシュが原因かも？
+</code></pre>
+
+<ul>
+<li>「そのドメイン名は存在しない」「その情報は存在しない」という情報のキャッシュ</li>
+<li>ドメイン名の登録設定（親ゾーンからの委任の設定）が行われる前に名前を引こうとすると、ネガティブキャッシュが残ってしまう</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="2400" data-y="1600">
+
+
+<h2>digコマンド</h2>
+
+<div class="highlight"><pre>dig option @dnsserver domain qurytype
+</pre></div>
+
+<div class="highlight"><pre>dig +norec @ns1.jprs.jp jprs.jp A
+</pre></div>
+
+<ul>
+<li>オプション
+
+<ul>
+<li>
+<code>+recurse</code> or <code>+rec</code>
+
+<ul>
+<li>再帰的クエリ</li>
+<li>階層構造をたどって</li>
+</ul>
+</li>
+<li>
+<code>+norecurse</code> or <code>+norec</code>
+
+<ul>
+<li>非再帰的クエリ</li>
+<li>持ってる情報教えて</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
 
 
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
