@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>page1</title>
+    <title>DNS基本のキ</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
     <link href="css/impress.css"  rel="stylesheet" />
     <link href="css/pygments.css" rel="stylesheet" />
@@ -18,24 +18,139 @@
 <div class="step" id="title" data-x="0" data-y="0">
 
 
-<h1>page1</h1>
-
-<div class="highlight"><pre><span class="nb">test </span>hoge
-</pre></div>
+<h1>DNS基本のキ</h1>
 
 
 </div>
 <div class="step" data-x="1200" data-y="0">
 
 
-<h1>page2</h1>
+<h2>route 53</h2>
+
+<p><img src="https://cloud.githubusercontent.com/assets/1235432/9739950/2cddc646-568d-11e5-8920-ceb2b29de007.png" alt="_2015-09-09_0_50_01"></p>
 
 
 </div>
 <div class="step" data-x="2400" data-y="0">
 
 
-<h3>fuga</h3>
+<h1>DNS、理解できてるか？</h1>
+
+
+</div>
+<div class="step" data-x="3600" data-y="0">
+
+
+<h3>参考1</h3>
+
+<p>Software Design 2015 4月号</p>
+
+<p><img src="http://ecx.images-amazon.com/images/I/71RV3pB-F0L.jpg" width="400px"></p>
+
+
+</div>
+<div class="step" data-x="4800" data-y="0">
+
+
+<h3>参考2</h3>
+
+<pre><code>株式会社日本レジストリサービス（JPRS）
+DNSチュートリアル
+
+https://www.janog.gr.jp/meeting/janog35/index.php/download_file/view/83/175/
+</code></pre>
+
+
+</div>
+<div class="step" data-x="0" data-y="800">
+
+
+<h1>ポイント</h1>
+
+<pre><code>DNSには常に2つの意味がある!
+</code></pre>
+
+
+</div>
+<div class="step" data-x="1200" data-y="800">
+
+
+<h2>DNSの種類</h2>
+
+<p><strong><em>DNS</em></strong>には以下の2つの意味がある</p>
+
+<ol>
+<li>DNSの階層構造を<code>構成する</code>(分散管理)</li>
+<li>DNSの階層構造を<code>たどる</code>(名前解決)</li>
+</ol>
+
+
+</div>
+<div class="step" data-x="2400" data-y="800">
+
+
+<h2>DNSサーバの種類</h2>
+
+<p><strong><em>DNSサーバ</em></strong>には以下の2つの意味がある</p>
+
+<ol>
+<li>
+<code>権威DNSサーバ</code>
+
+<ul>
+<li>階層構造を <strong><em>構成</em></strong> する</li>
+</ul>
+</li>
+<li>
+<code>キャッシュDNSサーバ</code>
+
+<ul>
+<li>階層構造を <strong><em>たどる</em></strong>
+</li>
+</ul>
+</li>
+</ol>
+
+
+</div>
+<div class="step" data-x="3600" data-y="800">
+
+
+<h2>DNSサーバ構成</h2>
+
+<p><img src="https://cloud.githubusercontent.com/assets/1235432/9740506/0c31ea96-5690-11e5-99ac-3d0742694d81.png" alt="2015-09-09 1 13 33"></p>
+
+
+</div>
+<div class="step" data-x="4800" data-y="800">
+
+
+<h2>2種類のクエリ</h2>
+
+<ol>
+<li>
+<strong><em>再帰的クエリ</em></strong>
+
+<ul>
+<li>クライアント -&gt; キャッシュDNSサーバ</li>
+<li>名前解決お願い!!(依頼)</li>
+<li>RD=1</li>
+</ul>
+</li>
+<li>
+<strong><em>非再帰的クエリ</em></strong>
+
+<ul>
+<li>キャッシュDNSサーバ -&gt; 権威DNSサーバ</li>
+<li>実際に名前引くよ!!(実行)</li>
+<li>キャッシュの有無によってはクエリは実行されない</li>
+<li>RD=0</li>
+</ul>
+</li>
+</ol>
+
+<pre><code>ここを区別できてないと問題の切り分けができない
+</code></pre>
 
 
 </div>
