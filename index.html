@@ -99,6 +99,9 @@ https://www.janog.gr.jp/meeting/janog35/index.php/download_file/view/83/175/
 
 <ul>
 <li>階層構造を <strong><em>構成</em></strong> する</li>
+<li>インターネット全体を対象</li>
+<li>Route 53<br>
+</li>
 </ul>
 </li>
 <li>
@@ -107,9 +110,15 @@ https://www.janog.gr.jp/meeting/janog35/index.php/download_file/view/83/175/
 <ul>
 <li>階層構造を <strong><em>たどる</em></strong>
 </li>
+<li>通常はISP内や組織内に限定</li>
+<li>google public DNS</li>
 </ul>
 </li>
 </ol>
+
+<pre><code>「DNSサーバ」には2つの意味があるので、
+使い分ける所から第一歩
+</code></pre>
 
 
 </div>
@@ -123,6 +132,28 @@ https://www.janog.gr.jp/meeting/janog35/index.php/download_file/view/83/175/
 
 </div>
 <div class="step" data-x="4800" data-y="800">
+
+
+<h2>名前がややこしい</h2>
+
+<ul>
+<li>キャッシュDNSサーバ
+
+<ul>
+<li>フルリゾルバー、フルサービスリゾルバー</li>
+</ul>
+</li>
+<li>権威DNSサーバ
+
+<ul>
+<li>DNSコンテンツサーバ、権威ネームサーバ、ゾーンサーバ</li>
+</ul>
+</li>
+</ul>
+
+
+</div>
+<div class="step" data-x="0" data-y="1600">
 
 
 <h2>2種類のクエリ</h2>
@@ -154,7 +185,7 @@ https://www.janog.gr.jp/meeting/janog35/index.php/download_file/view/83/175/
 
 
 </div>
-<div class="step" data-x="0" data-y="1600">
+<div class="step" data-x="1200" data-y="1600">
 
 
 <h2>キャッシュという諸刃の剣</h2>
@@ -180,7 +211,7 @@ https://www.janog.gr.jp/meeting/janog35/index.php/download_file/view/83/175/
 
 
 </div>
-<div class="step" data-x="1200" data-y="1600">
+<div class="step" data-x="2400" data-y="1600">
 
 
 <h2>ネガティブキャッシュ</h2>
@@ -200,7 +231,7 @@ https://www.janog.gr.jp/meeting/janog35/index.php/download_file/view/83/175/
 
 
 </div>
-<div class="step" data-x="2400" data-y="1600">
+<div class="step" data-x="3600" data-y="1600">
 
 
 <h2>digコマンド</h2>
@@ -233,6 +264,20 @@ https://www.janog.gr.jp/meeting/janog35/index.php/download_file/view/83/175/
 </li>
 </ul>
 </li>
+</ul>
+
+
+</div>
+<div class="step" data-x="4800" data-y="1600">
+
+
+<h2>まとめ</h2>
+
+<ul>
+<li>DNSには2種類の意味がある事を常に意識</li>
+<li>DNSサーバ</li>
+<li>DNSクエリ</li>
+<li>digを使ってみよう</li>
 </ul>
 
 
